@@ -286,6 +286,16 @@ function showOwnerLogin() {
   }, 100);
 }
 
+function showStaffLogin() {
+  document.getElementById('staff-login-list-wrap').style.display = 'none';
+  document.getElementById('owner-login-wrap').style.display      = 'none';
+  document.getElementById('staff-pin-wrap').style.display        = 'block';
+  const nameInput = document.getElementById('staff-name-input');
+  if (nameInput) { nameInput.value = ''; nameInput.focus(); }
+  document.querySelectorAll('.pin-digit').forEach(d => d.value = '');
+  document.querySelector('.pin-error').style.display = 'none';
+}
+
 function showAccountList() {
   document.getElementById('owner-login-wrap').style.display  = 'none';
   document.getElementById('staff-pin-wrap').style.display    = 'none';
@@ -879,40 +889,45 @@ function deleteStaff(id) {
 }
 
 // Staff login flow
-function selectStaffLogin(id) {
-  selectedStaffForLogin = staffList.find(s => s.id === id);
-  if (!selectedStaffForLogin) return;
-  document.getElementById('staff-login-list-wrap').style.display = 'none';
-  document.getElementById('owner-login-wrap').style.display      = 'none';
-  document.getElementById('staff-pin-wrap').style.display        = 'block';
-  document.getElementById('staff-pin-name').textContent = selectedStaffForLogin.name;
-  document.querySelectorAll('.pin-digit').forEach(d => d.value = '');
-  document.querySelector('.pin-error').style.display = 'none';
-  setTimeout(() => document.getElementById('pin-1').focus(), 100);
-}
 
 function verifyStaffPin() {
   const pin = [...document.querySelectorAll('.pin-digit')].map(d => d.value).join('');
-  if (!selectedStaffForLogin) return;
-  if (pin === selectedStaffForLogin.pin) {
+  const nameEntered = (document.getElementById('staff-name-input')?.value || '').trim().toLowerCase();
+  const pinError = document.querySelector('.pin-error');
+
+  // Try to match by name + PIN from staff list
+  let matched = null;
+  try {
+    const allStaff = JSON.parse(localStorage.getItem('mm_staff') || '[]');
+    matched = allStaff.find(s =>
+      s.name.toLowerCase() === nameEntered && s.pin === pin
+    );
+    // Also allow partial match on first name
+    if (!matched) {
+      matched = allStaff.find(s =>
+        s.name.toLowerCase().startsWith(nameEntered) && s.pin === pin
+      );
+    }
+  } catch(e) {}
+
+  if (matched) {
+    selectedStaffForLogin = matched;
     adminLoggedIn = true;
     document.getElementById('admin-login').style.display = 'none';
-    document.getElementById('admin-main').style.display = 'block';
-    // Restrict tabs based on access
-    const hasFullAccess = selectedStaffForLogin.access.includes('Full Access');
-    if (!hasFullAccess) {
-      document.querySelectorAll('.atab').forEach((tab, i) => {
-        if (i > 1) tab.style.display = 'none'; // Hide staff & zapier tabs for limited access
-      });
-    }
+    document.getElementById('admin-main').style.display  = 'block';
+    // Apply access restrictions
+    const hasFullAccess = matched.access.includes('Full Access');
+    document.querySelectorAll('.atab').forEach((tab, i) => {
+      if (!hasFullAccess && i > 2) tab.style.display = 'none';
+    });
     loadBookings();
   } else {
-    document.querySelector('.pin-error').style.display = 'block';
+    if (pinError) pinError.style.display = 'block';
     document.querySelectorAll('.pin-digit').forEach(d => d.value = '');
-    document.querySelector('.pin-digit').focus();
+    document.getElementById('pin-1')?.focus();
   }
 }
-
+   
 function movePinFocus(el, next) {
   if (el.value.length === 1 && next) {
     const nextEl = document.getElementById('pin-' + next);
