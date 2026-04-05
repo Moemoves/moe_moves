@@ -381,18 +381,31 @@
 
       <div class="form-card">
         <!-- NETLIFY FORM DECLARATION — Required for form capture -->
-        <form name="moemoves-booking"  data-netlify="true" netlify-honeypot="bot-field" hidden>
-          <input type="text" name="full-name"> <input type="tel" name="phone"> <input type="tel" name="whatsapp">
-          <input type="email" name="email"> <input type="text" name="source"> <input type="text" name="move-type">
-          <input type="text" name="service-type"> <input type="text" name="home-size">
-          <input type="text" name="move-from"> <input type="text" name="move-to">
-          <input type="text" name="distance"> <input type="date" name="move-date"> <input type="text" name="move-time">
-          <input type="text" name="floor-level"> <input type="text" name="services"> <input type="text" name="heavy-items">
-          <input type="text" name="fragile-items"> <input type="text" name="package"> <input type="text" name="budget">
-          <input type="text" name="estimated-quote"> <textarea name="notes"></textarea>
-          <input type="submit" value="Submit">
-        </form>
-
+      <form name="moemoves-booking" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="moemoves-booking">
+  <input type="text" name="full-name">
+  <input type="tel" name="phone">
+  <input type="tel" name="whatsapp">
+  <input type="email" name="email">
+  <input type="text" name="source">
+  <input type="text" name="service-type">
+  <input type="text" name="move-type">
+  <input type="text" name="home-size">
+  <input type="text" name="move-from">
+  <input type="text" name="move-to">
+  <input type="text" name="distance">
+  <input type="date" name="move-date">
+  <input type="text" name="move-time">
+  <input type="text" name="floor-level">
+  <input type="text" name="services">
+  <input type="text" name="heavy-items">
+  <input type="text" name="fragile-items">
+  <input type="text" name="package">
+  <input type="text" name="budget">
+  <input type="text" name="estimated-quote">
+  <textarea name="notes"></textarea>
+  <input type="submit" value="Submit">
+</form>
         <!-- ── SERVICE SELECTOR SCREEN ── -->
         <div id="svc-selector-screen">
           <div class="svc-selector">
