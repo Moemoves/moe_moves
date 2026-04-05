@@ -885,40 +885,55 @@
       <div class="login-wrap">
         <h3>Admin Access</h3>
         <p>Moé Moves Business Dashboard</p>
-        <!-- Staff login list -->
+
+        <!-- SCREEN 1: Account selector list -->
         <div id="staff-login-list-wrap">
           <div style="font-size:11px;color:rgba(255,255,255,.4);margin-bottom:10px;text-transform:uppercase;letter-spacing:1px">Select your account</div>
           <div class="staff-login-list" id="staff-login-list">
-            <!-- Owner/admin always shown -->
-            <div class="staff-login-item" onclick="document.getElementById('staff-login-list-wrap').style.display='none';document.getElementById('owner-login-wrap').style.display='block'">
+            <!-- Owner card — clicking shows the password screen -->
+            <div class="staff-login-item" onclick="showOwnerLogin()">
               <div class="staff-login-avatar">👑</div>
-              <div><div class="staff-login-name">Owner / Admin</div><div class="staff-login-role">Full Access</div></div>
+              <div>
+                <div class="staff-login-name">Owner / Admin</div>
+                <div class="staff-login-role">Full Access</div>
+              </div>
             </div>
-          </div>
-          <div id="owner-login-wrap" style="display:none">
-            <input class="iinp" id="admin-pw" type="password" placeholder="Enter admin password"
-                   onkeydown="if(event.key==='Enter') adminLogin()" style="margin-bottom:8px">
-            <button class="login-btn" onclick="adminLogin()">Sign In →</button>
-            <div style="margin-top:10px"><button onclick="document.getElementById('owner-login-wrap').style.display='none';document.getElementById('staff-login-list-wrap').style.display='block'" style="background:none;border:none;color:rgba(255,255,255,.3);font-size:11px;cursor:pointer">← Back to accounts</button></div>
-          </div>
-          <!-- Staff PIN login -->
-          <div id="staff-pin-wrap" style="display:none">
-            <div style="text-align:center;margin-bottom:12px">
-              <div style="font-size:13px;font-weight:700;color:var(--white)" id="staff-pin-name"></div>
-              <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:3px">Enter your PIN</div>
-            </div>
-            <div class="pin-inputs">
-              <input class="pin-digit" id="pin-1" type="password" maxlength="1" oninput="movePinFocus(this,'2')" onkeydown="if(event.key==='Enter') verifyStaffPin()">
-              <input class="pin-digit" id="pin-2" type="password" maxlength="1" oninput="movePinFocus(this,'3')" onkeydown="if(event.key==='Enter') verifyStaffPin()">
-              <input class="pin-digit" id="pin-3" type="password" maxlength="1" oninput="movePinFocus(this,'4')" onkeydown="if(event.key==='Enter') verifyStaffPin()">
-              <input class="pin-digit" id="pin-4" type="password" maxlength="1" onkeydown="if(event.key==='Enter') verifyStaffPin()">
-            </div>
-            <div class="pin-error">Wrong PIN. Please try again.</div>
-            <button class="pin-submit" onclick="verifyStaffPin()">Confirm PIN →</button>
-            <div style="margin-top:10px;text-align:center"><button onclick="document.getElementById('staff-pin-wrap').style.display='none';document.getElementById('staff-login-list-wrap').style.display='block'" style="background:none;border:none;color:rgba(255,255,255,.3);font-size:11px;cursor:pointer">← Back</button></div>
+            <!-- Staff cards are added here dynamically by openAdmin() -->
           </div>
         </div>
-        <p style="font-size:10px;color:rgba(255,255,255,.2);margin-top:16px">Admin password: moemoves2026</p>
+
+        <!-- SCREEN 2: Owner password input -->
+        <div id="owner-login-wrap" style="display:none">
+          <div style="font-size:13px;font-weight:700;color:var(--white);text-align:center;margin-bottom:6px">👑 Owner / Admin</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.45);text-align:center;margin-bottom:16px">Enter your password to continue</div>
+          <input class="iinp" id="admin-pw" type="password" placeholder="Enter admin password"
+                 onkeydown="if(event.key==='Enter') adminLogin()" style="margin-bottom:10px;text-align:center;letter-spacing:3px">
+          <button class="login-btn" onclick="adminLogin()">Sign In →</button>
+          <div style="margin-top:12px;text-align:center">
+            <button onclick="showAccountList()" style="background:none;border:none;color:rgba(255,255,255,.35);font-size:11px;cursor:pointer">← Back to accounts</button>
+          </div>
+        </div>
+
+        <!-- SCREEN 3: Staff PIN input -->
+        <div id="staff-pin-wrap" style="display:none">
+          <div style="text-align:center;margin-bottom:14px">
+            <div style="font-size:13px;font-weight:700;color:var(--white)" id="staff-pin-name"></div>
+            <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:3px">Enter your 4-digit PIN</div>
+          </div>
+          <div class="pin-inputs">
+            <input class="pin-digit" id="pin-1" type="password" maxlength="1" oninput="movePinFocus(this,'2')" onkeydown="if(event.key==='Enter') verifyStaffPin()">
+            <input class="pin-digit" id="pin-2" type="password" maxlength="1" oninput="movePinFocus(this,'3')" onkeydown="if(event.key==='Enter') verifyStaffPin()">
+            <input class="pin-digit" id="pin-3" type="password" maxlength="1" oninput="movePinFocus(this,'4')" onkeydown="if(event.key==='Enter') verifyStaffPin()">
+            <input class="pin-digit" id="pin-4" type="password" maxlength="1" onkeydown="if(event.key==='Enter') verifyStaffPin()">
+          </div>
+          <div class="pin-error" style="display:none">Wrong PIN. Please try again.</div>
+          <button class="pin-submit" onclick="verifyStaffPin()">Confirm PIN →</button>
+          <div style="margin-top:10px;text-align:center">
+            <button onclick="showAccountList()" style="background:none;border:none;color:rgba(255,255,255,.35);font-size:11px;cursor:pointer">← Back to accounts</button>
+          </div>
+        </div>
+
+        <p style="font-size:10px;color:rgba(255,255,255,.18);margin-top:18px;text-align:center">Default password: moemoves2026</p>
       </div>
     </div>
 
