@@ -381,7 +381,7 @@
 
       <div class="form-card">
         <!-- NETLIFY FORM DECLARATION — Required for form capture -->
-        <form name="moemoves-booking" netlify netlify-honeypot="bot-field" hidden>
+        <form name="moemoves-booking"  data-netlify="true" netlify-honeypot="bot-field" hidden>
           <input type="text" name="full-name"> <input type="tel" name="phone"> <input type="tel" name="whatsapp">
           <input type="email" name="email"> <input type="text" name="source"> <input type="text" name="move-type">
           <input type="text" name="service-type"> <input type="text" name="home-size">
@@ -390,6 +390,7 @@
           <input type="text" name="floor-level"> <input type="text" name="services"> <input type="text" name="heavy-items">
           <input type="text" name="fragile-items"> <input type="text" name="package"> <input type="text" name="budget">
           <input type="text" name="estimated-quote"> <textarea name="notes"></textarea>
+          <input type="submit" value="Submit">
         </form>
 
         <!-- ── SERVICE SELECTOR SCREEN ── -->
@@ -556,12 +557,12 @@
             <div class="ffield">
               <label class="flabel">Large / heavy items</label>
               <div class="fchkgrid" id="ghv">
-                <div class="fchk" onclick="fc(this)" data-v="Large fridge"><div class="fchkbox"></div><span class="fchklbl">🧊 Large fridge</span></div>
+                <div class="fchk" onclick="fc(this)" data-v="Large fridge / Deep freezer"><div class="fchkbox"></div><span class="fchklbl">🧊 Large fridge / Deep freezer</span></div>
                 <div class="fchk" onclick="fc(this)" data-v="Washing machine"><div class="fchkbox"></div><span class="fchklbl">🫧 Washing machine</span></div>
                 <div class="fchk" onclick="fc(this)" data-v="Large wardrobe"><div class="fchkbox"></div><span class="fchklbl">🚪 Large wardrobe</span></div>
                 <div class="fchk" onclick="fc(this)" data-v="Generator"><div class="fchkbox"></div><span class="fchklbl">⚙️ Generator</span></div>
                 <div class="fchk" onclick="fc(this)" data-v="Large sofa"><div class="fchkbox"></div><span class="fchklbl">🛋️ Large sofa</span></div>
-                <div class="fchk" onclick="fc(this)" data-v="Piano/Keyboard"><div class="fchkbox"></div><span class="fchklbl">🎹 Piano/Keyboard</span></div>
+                <div class="fchk" onclick="fc(this)" data-v="Gas cooker"><div class="fchkbox"></div><span class="fchklbl"> 🫕 Gas cooker</span></div>
               </div>
             </div>
             <div class="ffield">
@@ -664,7 +665,7 @@
             <div class="qbox" id="fqbox3" style="display:none;margin-bottom:16px"><div><div class="qlbl">Estimated Quote</div><div class="qamt" id="fqamt3">—</div><div class="qnote">Written confirmation follows</div></div><span style="font-size:24px">💰</span></div>
             <div class="fact-btns">
               <a id="fcal-link" href="#" target="_blank" class="fcal-btn">📅 Add to Google Calendar</a>
-              <a id="fwa-link" href="https://wa.me/2348000000000" target="_blank" class="fwa-btn">💬 WhatsApp Us Now</a>
+              <a id="fwa-link" href="https://wa.me/2348108484478" target="_blank" class="fwa-btn">💬 WhatsApp Us Now</a>
             </div>
           </div>
         </div><!-- /branch-moving -->
@@ -716,7 +717,7 @@
             <div class="branch-icon">🔧</div>
             <div class="branch-title">Artisan Service Booking</div>
           </div>
-          <div class="fp-sub">Tell us what you need — we connect you with our trusted artisans.</div>
+          <div class="fp-sub">Tell us what you need, we connect you with our trusted artisans.</div>
           <div class="ffield">
             <label class="flabel">What service do you need? (tick all that apply)</label>
             <div class="sub-svc-grid" id="ar-svcs">
@@ -753,7 +754,7 @@
             <p class="fsucc-p">Thank you <strong id="bs-name"></strong>! We will contact you on <strong id="bs-contact"></strong> within <strong>2 hours</strong> regarding your <strong id="bs-type"></strong> request.</p>
             <div class="fact-btns">
               <a id="bs-cal" href="#" target="_blank" class="fcal-btn">📅 Add to Google Calendar</a>
-              <a id="bs-wa" href="https://wa.me/2348000000000" target="_blank" class="fwa-btn">💬 WhatsApp Us Now</a>
+              <a id="bs-wa" href="https://wa.me/2348108484478" target="_blank" class="fwa-btn">💬 WhatsApp Us Now</a>
             </div>
             <div style="margin-top:16px"><button onclick="backToSelector();document.getElementById('branch-success').classList.remove('active')" style="background:none;border:1.5px solid var(--border);border-radius:10px;padding:9px 20px;font-family:inherit;font-size:12px;font-weight:700;color:var(--muted);cursor:pointer">← Submit Another Request</button></div>
           </div>
@@ -777,14 +778,14 @@
             <div>
               <div class="ci-label">Call / WhatsApp</div>
               <!-- Replace [Your Number] with your actual number -->
-              <div class="ci-value"><a href="tel:+2348000000000">[Your Phone Number]</a></div>
+              <div class="ci-value"><a href="tel:+2348108484478">[Your Phone Number]</a></div>
             </div>
           </div>
           <div class="contact-item">
             <div class="ci-icon">📸</div>
             <div>
               <div class="ci-label">Instagram</div>
-              <div class="ci-value"><a href="https://instagram.com/moemoves" target="_blank">@moemoves</a></div>
+              <div class="ci-value"><a href="https://instagram.com/moe_movesng" target="_blank">@moe_movesng</a></div>
             </div>
           </div>
           <div class="contact-item">
@@ -823,9 +824,9 @@
         <p class="footer-desc">Ilorin's professional relocation and home support service. We handle everything so you just walk into your new home ready to live.</p>
         <div class="footer-social">
           <!-- EDITABLE: Update these links with your actual social media URLs -->
-          <a href="https://instagram.com/moemoves" target="_blank" class="social-btn" aria-label="Instagram">📸</a>
-          <a href="https://wa.me/2348000000000" target="_blank" class="social-btn" aria-label="WhatsApp">💬</a>
-          <a href="https://facebook.com/moemoves" target="_blank" class="social-btn" aria-label="Facebook">👤</a>
+          <a href="https://instagram.com/moe_movesng" target="_blank" class="social-btn" aria-label="Instagram">📸</a>
+          <a href="https://wa.me/2348108484478" target="_blank" class="social-btn" aria-label="WhatsApp">💬</a>
+          <a href="https://facebook.com/moe moves" target="_blank" class="social-btn" aria-label="Facebook">👤</a>
         </div>
       </div>
       <div class="fcol">
@@ -851,9 +852,9 @@
       <div class="fcol">
         <h4>Contact</h4>
         <ul>
-          <li><a href="https://wa.me/2348000000000" target="_blank">WhatsApp Us</a></li>
+          <li><a href="https://wa.me/2348108484478" target="_blank">WhatsApp Us</a></li>
           <li><a href="#book">Book a Move</a></li>
-          <li><a href="https://instagram.com/moemoves" target="_blank">@moemoves</a></li>
+          <li><a href="https://instagram.com/moe_movesng" target="_blank">@moe_movesng</a></li>
           <li><a href="#contact">Ilorin, Kwara State</a></li>
         </ul>
       </div>
@@ -867,8 +868,8 @@
 </footer>
 
 <!-- ═══ WHATSAPP FLOATING BUTTON ═══════════════════════════════ -->
-<!-- EDITABLE: Replace 2348000000000 with your actual WhatsApp number -->
-<a href="https://wa.me/2348000000000?text=Hello%20Mo%C3%A9%20Moves!%20I%20would%20like%20to%20enquire%20about%20your%20services."
+<!-- EDITABLE: Replace 2348108484478 with your actual WhatsApp number -->
+<a href="https://wa.me/2348108484478?text=Hello%20Mo%C3%A9%20Moves!%20I%20would%20like%20to%20enquire%20about%20your%20services."
    target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
   <div class="wa-tip">Chat with us!</div>
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -886,22 +887,28 @@
         <h3>Admin Access</h3>
         <p>Moé Moves Business Dashboard</p>
 
-        <!-- SCREEN 1: Account selector list -->
-        <div id="staff-login-list-wrap">
-          <div style="font-size:11px;color:rgba(255,255,255,.4);margin-bottom:10px;text-transform:uppercase;letter-spacing:1px">Select your account</div>
-          <div class="staff-login-list" id="staff-login-list">
-            <!-- Owner card — clicking shows the password screen -->
-            <div class="staff-login-item" onclick="showOwnerLogin()">
-              <div class="staff-login-avatar">👑</div>
-              <div>
-                <div class="staff-login-name">Owner / Admin</div>
-                <div class="staff-login-role">Full Access</div>
-              </div>
-            </div>
-            <!-- Staff cards are added here dynamically by openAdmin() -->
-          </div>
-        </div>
-
+       <!-- SCREEN 1: Two-option selector -->
+<div id="staff-login-list-wrap">
+  <div style="font-size:11px;color:rgba(255,255,255,.4);margin-bottom:14px;text-transform:uppercase;letter-spacing:1px">Who is logging in?</div>
+  <div style="display:flex;flex-direction:column;gap:10px">
+    <div class="staff-login-item" onclick="showOwnerLogin()">
+      <div class="staff-login-avatar">👑</div>
+      <div>
+        <div class="staff-login-name">Owner / Admin</div>
+        <div class="staff-login-role">Full dashboard access</div>
+      </div>
+      <div style="margin-left:auto;font-size:16px;color:rgba(255,255,255,.25)">→</div>
+    </div>
+    <div class="staff-login-item" onclick="showStaffLogin()">
+      <div class="staff-login-avatar">👷</div>
+      <div>
+        <div class="staff-login-name">Staff / Worker</div>
+        <div class="staff-login-role">Enter your name and PIN</div>
+      </div>
+      <div style="margin-left:auto;font-size:16px;color:rgba(255,255,255,.25)">→</div>
+    </div>
+  </div>
+</div>
         <!-- SCREEN 2: Owner password input -->
         <div id="owner-login-wrap" style="display:none">
           <div style="font-size:13px;font-weight:700;color:var(--white);text-align:center;margin-bottom:6px">👑 Owner / Admin</div>
@@ -914,25 +921,29 @@
           </div>
         </div>
 
-        <!-- SCREEN 3: Staff PIN input -->
-        <div id="staff-pin-wrap" style="display:none">
-          <div style="text-align:center;margin-bottom:14px">
-            <div style="font-size:13px;font-weight:700;color:var(--white)" id="staff-pin-name"></div>
-            <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:3px">Enter your 4-digit PIN</div>
-          </div>
-          <div class="pin-inputs">
-            <input class="pin-digit" id="pin-1" type="password" maxlength="1" oninput="movePinFocus(this,'2')" onkeydown="if(event.key==='Enter') verifyStaffPin()">
-            <input class="pin-digit" id="pin-2" type="password" maxlength="1" oninput="movePinFocus(this,'3')" onkeydown="if(event.key==='Enter') verifyStaffPin()">
-            <input class="pin-digit" id="pin-3" type="password" maxlength="1" oninput="movePinFocus(this,'4')" onkeydown="if(event.key==='Enter') verifyStaffPin()">
-            <input class="pin-digit" id="pin-4" type="password" maxlength="1" onkeydown="if(event.key==='Enter') verifyStaffPin()">
-          </div>
-          <div class="pin-error" style="display:none">Wrong PIN. Please try again.</div>
-          <button class="pin-submit" onclick="verifyStaffPin()">Confirm PIN →</button>
-          <div style="margin-top:10px;text-align:center">
-            <button onclick="showAccountList()" style="background:none;border:none;color:rgba(255,255,255,.35);font-size:11px;cursor:pointer">← Back to accounts</button>
-          </div>
-        </div>
-
+       <!-- SCREEN 3: Staff login — name + PIN -->
+<div id="staff-pin-wrap" style="display:none">
+  <div style="text-align:center;margin-bottom:16px">
+    <div style="font-size:22px;margin-bottom:6px">👷</div>
+    <div style="font-size:13px;font-weight:700;color:var(--white)">Staff / Worker Login</div>
+    <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:3px">Enter your name and PIN</div>
+  </div>
+  <input class="iinp" id="staff-name-input" placeholder="Your full name or username"
+         style="margin-bottom:12px;text-align:center"
+         onkeydown="if(event.key==='Enter') document.getElementById('pin-1').focus()">
+  <div style="font-size:10px;color:rgba(255,255,255,.35);text-align:center;margin-bottom:8px;letter-spacing:1px;text-transform:uppercase">4-Digit PIN</div>
+  <div class="pin-inputs">
+    <input class="pin-digit" id="pin-1" type="password" maxlength="1" oninput="movePinFocus(this,'2')" onkeydown="if(event.key==='Enter') verifyStaffPin()">
+    <input class="pin-digit" id="pin-2" type="password" maxlength="1" oninput="movePinFocus(this,'3')" onkeydown="if(event.key==='Enter') verifyStaffPin()">
+    <input class="pin-digit" id="pin-3" type="password" maxlength="1" oninput="movePinFocus(this,'4')" onkeydown="if(event.key==='Enter') verifyStaffPin()">
+    <input class="pin-digit" id="pin-4" type="password" maxlength="1" onkeydown="if(event.key==='Enter') verifyStaffPin()">
+  </div>
+  <div class="pin-error" style="display:none;color:#ff6b6b;font-size:11px;text-align:center;margin-top:8px">Name not found or wrong PIN. Please try again.</div>
+  <button class="pin-submit" onclick="verifyStaffPin()">Sign In →</button>
+  <div style="margin-top:10px;text-align:center">
+    <button onclick="showAccountList()" style="background:none;border:none;color:rgba(255,255,255,.35);font-size:11px;cursor:pointer">← Back</button>
+  </div>
+</div>
         <p style="font-size:10px;color:rgba(255,255,255,.18);margin-top:18px;text-align:center">Default password: moemoves2026</p>
       </div>
     </div>
