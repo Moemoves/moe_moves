@@ -381,31 +381,17 @@
 
       <div class="form-card">
         <!-- NETLIFY FORM DECLARATION — Required for form capture -->
-      <form name="moemoves-booking" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
-  <input type="hidden" name="form-name" value="moemoves-booking">
-  <input type="text" name="full-name">
-  <input type="tel" name="phone">
-  <input type="tel" name="whatsapp">
-  <input type="email" name="email">
-  <input type="text" name="source">
-  <input type="text" name="service-type">
-  <input type="text" name="move-type">
-  <input type="text" name="home-size">
-  <input type="text" name="move-from">
-  <input type="text" name="move-to">
-  <input type="text" name="distance">
-  <input type="date" name="move-date">
-  <input type="text" name="move-time">
-  <input type="text" name="floor-level">
-  <input type="text" name="services">
-  <input type="text" name="heavy-items">
-  <input type="text" name="fragile-items">
-  <input type="text" name="package">
-  <input type="text" name="budget">
-  <input type="text" name="estimated-quote">
-  <textarea name="notes"></textarea>
-  <input type="submit" value="Submit">
-</form>
+        <form name="moemoves-booking" netlify netlify-honeypot="bot-field" hidden>
+          <input type="text" name="full-name"> <input type="tel" name="phone"> <input type="tel" name="whatsapp">
+          <input type="email" name="email"> <input type="text" name="source"> <input type="text" name="move-type">
+          <input type="text" name="service-type"> <input type="text" name="home-size">
+          <input type="text" name="move-from"> <input type="text" name="move-to">
+          <input type="text" name="distance"> <input type="date" name="move-date"> <input type="text" name="move-time">
+          <input type="text" name="floor-level"> <input type="text" name="services"> <input type="text" name="heavy-items">
+          <input type="text" name="fragile-items"> <input type="text" name="package"> <input type="text" name="budget">
+          <input type="text" name="estimated-quote"> <textarea name="notes"></textarea>
+        </form>
+
         <!-- ── SERVICE SELECTOR SCREEN ── -->
         <div id="svc-selector-screen">
           <div class="svc-selector">
@@ -678,7 +664,7 @@
             <div class="qbox" id="fqbox3" style="display:none;margin-bottom:16px"><div><div class="qlbl">Estimated Quote</div><div class="qamt" id="fqamt3">—</div><div class="qnote">Written confirmation follows</div></div><span style="font-size:24px">💰</span></div>
             <div class="fact-btns">
               <a id="fcal-link" href="#" target="_blank" class="fcal-btn">📅 Add to Google Calendar</a>
-              <a id="fwa-link" href="https://wa.me/2348108484478" target="_blank" class="fwa-btn">💬 WhatsApp Us Now</a>
+              <a id="fwa-link" href="https://wa.me/2348000000000" target="_blank" class="fwa-btn">💬 WhatsApp Us Now</a>
             </div>
           </div>
         </div><!-- /branch-moving -->
@@ -730,7 +716,7 @@
             <div class="branch-icon">🔧</div>
             <div class="branch-title">Artisan Service Booking</div>
           </div>
-          <div class="fp-sub">Tell us what you need, we connect you with our trusted artisans.</div>
+          <div class="fp-sub">Tell us what you need — we connect you with our trusted artisans.</div>
           <div class="ffield">
             <label class="flabel">What service do you need? (tick all that apply)</label>
             <div class="sub-svc-grid" id="ar-svcs">
@@ -767,7 +753,7 @@
             <p class="fsucc-p">Thank you <strong id="bs-name"></strong>! We will contact you on <strong id="bs-contact"></strong> within <strong>2 hours</strong> regarding your <strong id="bs-type"></strong> request.</p>
             <div class="fact-btns">
               <a id="bs-cal" href="#" target="_blank" class="fcal-btn">📅 Add to Google Calendar</a>
-              <a id="bs-wa" href="https://wa.me/2348108484478" target="_blank" class="fwa-btn">💬 WhatsApp Us Now</a>
+              <a id="bs-wa" href="https://wa.me/2348000000000" target="_blank" class="fwa-btn">💬 WhatsApp Us Now</a>
             </div>
             <div style="margin-top:16px"><button onclick="backToSelector();document.getElementById('branch-success').classList.remove('active')" style="background:none;border:1.5px solid var(--border);border-radius:10px;padding:9px 20px;font-family:inherit;font-size:12px;font-weight:700;color:var(--muted);cursor:pointer">← Submit Another Request</button></div>
           </div>
@@ -791,7 +777,7 @@
             <div>
               <div class="ci-label">Call / WhatsApp</div>
               <!-- Replace [Your Number] with your actual number -->
-              <div class="ci-value"><a href="tel:+2348108484478">[Your Phone Number]</a></div>
+              <div class="ci-value"><a href="tel:+2348108484478">[+2348108484478]</a></div>
             </div>
           </div>
           <div class="contact-item">
@@ -867,7 +853,7 @@
         <ul>
           <li><a href="https://wa.me/2348108484478" target="_blank">WhatsApp Us</a></li>
           <li><a href="#book">Book a Move</a></li>
-          <li><a href="https://instagram.com/moe_movesng" target="_blank">@moe_movesng</a></li>
+          <li><a href="https://instagram.com/moe_movesng" target="_blank">@moe_ngmoves</a></li>
           <li><a href="#contact">Ilorin, Kwara State</a></li>
         </ul>
       </div>
@@ -899,8 +885,7 @@
       <div class="login-wrap">
         <h3>Admin Access</h3>
         <p>Moé Moves Business Dashboard</p>
-
-       <!-- SCREEN 1: Two-option selector -->
+<!-- SCREEN 1: Two-option selector -->
 <div id="staff-login-list-wrap">
   <div style="font-size:11px;color:rgba(255,255,255,.4);margin-bottom:14px;text-transform:uppercase;letter-spacing:1px">Who is logging in?</div>
   <div style="display:flex;flex-direction:column;gap:10px">
@@ -922,6 +907,8 @@
     </div>
   </div>
 </div>
+      
+
         <!-- SCREEN 2: Owner password input -->
         <div id="owner-login-wrap" style="display:none">
           <div style="font-size:13px;font-weight:700;color:var(--white);text-align:center;margin-bottom:6px">👑 Owner / Admin</div>
@@ -934,7 +921,7 @@
           </div>
         </div>
 
-       <!-- SCREEN 3: Staff login — name + PIN -->
+        <!-- SCREEN 3: Staff login — name + PIN -->
 <div id="staff-pin-wrap" style="display:none">
   <div style="text-align:center;margin-bottom:16px">
     <div style="font-size:22px;margin-bottom:6px">👷</div>
@@ -960,7 +947,6 @@
         <p style="font-size:10px;color:rgba(255,255,255,.18);margin-top:18px;text-align:center">Default password: moemoves2026</p>
       </div>
     </div>
-
     <!-- Main dashboard -->
     <div id="admin-main" style="display:none">
       <div class="admin-header">
@@ -1052,9 +1038,28 @@
         <div class="add-staff-form">
           <div class="add-staff-title">➕ Add New Staff Member</div>
           <div class="add-staff-grid">
-            <div><label class="ilbl">Full Name</label><input class="iinp" id="ns-name" placeholder="e.g. Yusuf Bello"></div>
-            <div><label class="ilbl">Role / Position</label><input class="iinp" id="ns-role" placeholder="e.g. Mover, Cleaner, Admin"></div>
-            <div><label class="ilbl">4-Digit PIN</label><input class="iinp" id="ns-pin" type="password" maxlength="6" placeholder="e.g. 1234"></div>
+            <div><label class="ilbl">Full Name <span style="color:var(--orange)">*</span></label><input class="iinp" id="ns-name" placeholder="e.g. Yusuf Bello"></div>
+            <div><label class="ilbl">Role / Position <span style="color:var(--orange)">*</span></label><input class="iinp" id="ns-role" placeholder="e.g. Team Lead, Cleaner"></div>
+            <div><label class="ilbl">Category</label>
+              <select class="iinp" id="ns-cat" style="appearance:none;cursor:pointer">
+                <option value="">Select category...</option>
+                <option>Mover</option><option>Driver</option><option>Cleaner</option>
+                <option>Artisan</option><option>Supervisor</option><option>Manager</option><option>Admin</option>
+              </select>
+            </div>
+            <div><label class="ilbl">Phone Number</label><input class="iinp" id="ns-phone" placeholder="e.g. 0803 000 0000" type="tel"></div>
+            <div><label class="ilbl">Gender</label>
+              <select class="iinp" id="ns-gender" style="appearance:none;cursor:pointer">
+                <option value="">Select...</option><option>Male</option><option>Female</option>
+              </select>
+            </div>
+            <div><label class="ilbl">Date of Birth</label><input class="iinp" id="ns-dob" type="date"></div>
+            <div><label class="ilbl">Marital Status</label>
+              <select class="iinp" id="ns-marital" style="appearance:none;cursor:pointer">
+                <option value="">Select...</option><option>Single</option><option>Married</option><option>Divorced</option><option>Widowed</option>
+              </select>
+            </div>
+            <div><label class="ilbl">4-Digit PIN <span style="color:var(--orange)">*</span></label><input class="iinp" id="ns-pin" type="password" maxlength="6" placeholder="Min 4 digits"></div>
           </div>
           <div class="access-select">
             <label class="ilbl">Dashboard Access Level</label>
