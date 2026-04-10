@@ -3,7 +3,7 @@
 ═══════════════════════════════════════════════════════════ */
 
 const SUPA_URL = 'https://wwuaukjxaiizlcfxxxsh.supabase.co';
-const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im56bmdsbW9hcHJ4eHdxZmV4aGp3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU3NTA5NjgsImV4cCI6MjA5MTMyNjk2OH0.k-I4G4X3lJ0gpTKUxucZnfol2h_G18dJqJePty6Qf2w';
+const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind3dWF1a2p4YWlpemxjZnh4eHNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU3MTQ1NzksImV4cCI6MjA5MTI5MDU3OX0.ou8hGMHLVmZOfcVpErZxG6Z7vAWFswVmAC2taUeLbWw';
 
 const SB = {
   'Content-Type':'application/json',
