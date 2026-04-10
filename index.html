@@ -4,13 +4,61 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Moé Moves — Stress-Free Relocation & Home Support | Ilorin</title>
-<meta name="description" content="Moé Moves is Ilorin's professional relocation and home support service. Packing, moving, cleaning, home setup and artisan services. Book today.">
-<meta property="og:title" content="Moé Moves — Your Move, Made Easy.">
-<meta property="og:description" content="Professional relocation and home support in Ilorin, Kwara State. Packing, moving, cleaning, and home setup.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
+<!-- ═══ SEO & SOCIAL META TAGS ═══ -->
+<meta name="description" content="Moé Moves is Ilorin's professional relocation and home support service. Packing, moving, cleaning, home setup and artisan services. Book your free consultation today.">
+<meta name="keywords" content="moving company Ilorin, relocation Ilorin, packing service Ilorin, cleaning service Ilorin, home setup Ilorin, movers Kwara State, Moe Moves">
+<meta name="author" content="Moé Moves">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0F2645">
+<link rel="canonical" href="https://moe-moves.netlify.app">
+
+<!-- Open Graph (for WhatsApp and Facebook previews) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://moe-moves.netlify.app">
+<meta property="og:title" content="Moé Moves — Stress-Free Relocation & Home Support | Ilorin">
+<meta property="og:description" content="Professional packing, moving, cleaning and home setup in Ilorin, Kwara State. Book your free consultation — we respond within 2 hours.">
+<meta property="og:image" content="https://moe-moves.netlify.app/team.png">
+<meta property="og:locale" content="en_NG">
+
+<!-- Twitter/X card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Moé Moves — Your Move, Made Easy.">
+<meta name="twitter:description" content="Ilorin's professional relocation and home support service.">
+<meta name="twitter:image" content="https://moe-moves.netlify.app/team.png">
+
+<!-- Structured data for Google (Local Business) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MovingCompany",
+  "name": "Moé Moves",
+  "description": "Professional relocation and home support services in Ilorin, Kwara State, Nigeria.",
+  "url": "https://moe-moves.netlify.app",
+  "telephone": "+2348108484478",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ilorin",
+    "addressRegion": "Kwara State",
+    "addressCountry": "NG"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "8.4966",
+    "longitude": "4.5426"
+  },
+  "openingHours": "Mo-Sa 07:00-20:00",
+  "priceRange": "₦₦",
+  "sameAs": [
+    "https://instagram.com/moe_movesng",
+    "https://facebook.com/moe moves"
+  ],
+  "areaServed": {
+    "@type": "City",
+    "name": "Ilorin"
+  },
+  "serviceType": ["Moving", "Packing", "Cleaning", "Home Setup", "Artisan Services"]
+}
+</script>
 <body>
 
 <!-- ═══ NAVBAR ═══════════════════════════════════════════════ -->
@@ -381,17 +429,31 @@
 
       <div class="form-card">
         <!-- NETLIFY FORM DECLARATION — Required for form capture -->
-        <form name="moemoves-booking" netlify netlify-honeypot="bot-field" hidden>
-          <input type="text" name="full-name"> <input type="tel" name="phone"> <input type="tel" name="whatsapp">
-          <input type="email" name="email"> <input type="text" name="source"> <input type="text" name="move-type">
-          <input type="text" name="service-type"> <input type="text" name="home-size">
-          <input type="text" name="move-from"> <input type="text" name="move-to">
-          <input type="text" name="distance"> <input type="date" name="move-date"> <input type="text" name="move-time">
-          <input type="text" name="floor-level"> <input type="text" name="services"> <input type="text" name="heavy-items">
-          <input type="text" name="fragile-items"> <input type="text" name="package"> <input type="text" name="budget">
-          <input type="text" name="estimated-quote"> <textarea name="notes"></textarea>
-        </form>
-
+       <form name="moemoves-booking" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="moemoves-booking">
+  <input type="text" name="full-name">
+  <input type="tel" name="phone">
+  <input type="tel" name="whatsapp">
+  <input type="email" name="email">
+  <input type="text" name="source">
+  <input type="text" name="service-type">
+  <input type="text" name="move-type">
+  <input type="text" name="home-size">
+  <input type="text" name="move-from">
+  <input type="text" name="move-to">
+  <input type="text" name="distance">
+  <input type="date" name="move-date">
+  <input type="text" name="move-time">
+  <input type="text" name="floor-level">
+  <input type="text" name="services">
+  <input type="text" name="heavy-items">
+  <input type="text" name="fragile-items">
+  <input type="text" name="package">
+  <input type="text" name="budget">
+  <input type="text" name="estimated-quote">
+  <textarea name="notes"></textarea>
+  <input type="submit" value="Submit">
+</form> 
         <!-- ── SERVICE SELECTOR SCREEN ── -->
         <div id="svc-selector-screen">
           <div class="svc-selector">
@@ -753,7 +815,7 @@
             <p class="fsucc-p">Thank you <strong id="bs-name"></strong>! We will contact you on <strong id="bs-contact"></strong> within <strong>2 hours</strong> regarding your <strong id="bs-type"></strong> request.</p>
             <div class="fact-btns">
               <a id="bs-cal" href="#" target="_blank" class="fcal-btn">📅 Add to Google Calendar</a>
-              <a id="bs-wa" href="https://wa.me/2348000000000" target="_blank" class="fwa-btn">💬 WhatsApp Us Now</a>
+              <a id="bs-wa" href="https://wa.me/2348108484478" target="_blank" class="fwa-btn">💬 WhatsApp Us Now</a>
             </div>
             <div style="margin-top:16px"><button onclick="backToSelector();document.getElementById('branch-success').classList.remove('active')" style="background:none;border:1.5px solid var(--border);border-radius:10px;padding:9px 20px;font-family:inherit;font-size:12px;font-weight:700;color:var(--muted);cursor:pointer">← Submit Another Request</button></div>
           </div>
@@ -853,7 +915,7 @@
         <ul>
           <li><a href="https://wa.me/2348108484478" target="_blank">WhatsApp Us</a></li>
           <li><a href="#book">Book a Move</a></li>
-          <li><a href="https://instagram.com/moe_movesng" target="_blank">@moe_ngmoves</a></li>
+          <li><a href="https://instagram.com/moe_movesng" target="_blank">@moe_movesng</a></li>
           <li><a href="#contact">Ilorin, Kwara State</a></li>
         </ul>
       </div>
